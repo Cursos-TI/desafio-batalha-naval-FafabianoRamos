@@ -1,6 +1,6 @@
-## ▶️ Como compilar e executar (Nível Novato)
+## ▶️ Como compilar e executar (Nível Aventureiro)
 
-O arquivo principal que implementa o Nível Novato é `batalhaNaval.c`.
+O arquivo `batalhaNaval.c` contém também a implementação do Nível Aventureiro (tabuleiro 10x10 e 4 navios, incluindo dois na diagonal).
 
 1) Compile o código C com `gcc`:
 
@@ -17,26 +17,62 @@ gcc batalhaNaval.c -o batalhaNaval
 3) Saída esperada (exemplo):
 
 ```text
-Navio Vertical (tamanho 3):
-	Parte 1 -> (X=1, Y=0)
-	Parte 2 -> (X=1, Y=1)
-	Parte 3 -> (X=1, Y=2)
+Nível Aventureiro - Coordenadas dos Navios
 
-Navio Horizontal (tamanho 4):
-	Parte 1 -> (X=0, Y=3)
-	Parte 2 -> (X=1, Y=3)
-	Parte 3 -> (X=2, Y=3)
-	Parte 4 -> (X=3, Y=3)
+Navio Vertical 1 (tamanho 4):
+  Parte 1 -> (X=2, Y=1)
+  Parte 2 -> (X=2, Y=2)
+  Parte 3 -> (X=2, Y=3)
+  Parte 4 -> (X=2, Y=4)
 
-Tabuleiro (0=vazio,1=vert,2=hor,3=colisao):
-0 1 0 0 0 
-0 1 0 0 0 
-0 1 0 0 0 
-2 2 2 2 0 
-0 0 0 0 0 
+Navio Horizontal 1 (tamanho 3):
+  Parte 1 -> (X=5, Y=2)
+  Parte 2 -> (X=6, Y=2)
+  Parte 3 -> (X=7, Y=2)
+
+Navio Diagonal 1 (tamanho 3):
+  Parte 1 -> (X=3, Y=3)
+  Parte 2 -> (X=4, Y=4)
+  Parte 3 -> (X=5, Y=5)
+
+Navio Diagonal 2 (tamanho 4):
+  Parte 1 -> (X=6, Y=0)
+  Parte 2 -> (X=7, Y=1)
+  Parte 3 -> (X=8, Y=2)
+  Parte 4 -> (X=9, Y=3)
+
+Tabuleiro 10x10 (0=vazio,3=ocupado):
+0 0 0 0 0 0 3 0 0 0 
+0 0 3 0 0 0 0 3 0 0 
+0 0 3 0 0 3 3 3 3 0 
+0 0 3 3 0 0 0 0 0 3 
+0 0 3 0 3 0 0 0 0 0 
+0 0 0 0 0 3 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
 ```
 
 Notas rápidas:
-- Os valores e posições dos navios são definidos por variáveis dentro de `batalhaNaval.c` (por exemplo `vert_start_x`, `vert_start_y`, `hor_start_x`, `hor_start_y`).
-- Códigos no tabuleiro: `0` = vazio, `1` = parte do navio vertical, `2` = parte do navio horizontal, `3` = colisão (sobreposição).
-- Próximo passo sugerido: atualizar os valores das variáveis para testar outras posições/tamanhos, ou avançar para o Nível Aventureiro (tabuleiro 10x10, navios diagonais).
+- As posições dos navios estão definidas por variáveis dentro de `batalhaNaval.c` (por exemplo `v1_x`, `v1_y`, `d1_x`, `d1_y`).
+- No Nível Aventureiro usamos `3` para indicar posições ocupadas no tabuleiro.
+- Você pode editar os valores no código para testar outros posicionamentos e tamanhos.
+
+---
+
+## 📋 Requisitos Funcionais Comuns
+- **Entrada de Dados:** Os valores serão inseridos manualmente por meio de variáveis no código.
+- **Utilização de Matrizes:** Os dados devem ser estruturados de maneira eficiente utilizando matrizes.
+- **Exibição de Resultados:** Os resultados devem ser exibidos de forma clara e organizada.
+
+## 📌 Requisitos Não Funcionais Comuns
+- **Performance:** O sistema deve executar operações de forma eficiente, sem atrasos perceptíveis.
+- **Documentação:** O código deve ser bem documentado, com comentários claros sobre a função de cada parte do código.
+- **Manutenibilidade:** O código deve ser organizado e fácil de entender, facilitando futuras manutenções e expansões.
+
+---
+
+Boa sorte no desenvolvimento deste desafio! Aproveite para aprimorar suas habilidades em vetores e matrizes enquanto progride pelos níveis.
+
+Equipe de Ensino - MateCheck
