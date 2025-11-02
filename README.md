@@ -61,6 +61,68 @@ Notas rápidas:
 
 ---
 
+## ▶️ Nível Mestre — Habilidades Especiais
+
+No Nível Mestre, o programa demonstra a aplicação de padrões de habilidades sobre um tabuleiro usando matrizes específicas.
+
+### 🆕 O que é implementado:
+- Três padrões/matrizes de habilidade: **cone**, **octaedro** e **cruz** (representados por matrizes 3x5).
+- Um tabuleiro 10x10 que recebe as áreas afetadas por cada habilidade. Células afetadas são marcadas com `1`.
+- Exibição dos padrões e do tabuleiro final mostrando 0 = não atingido, 1 = atingido.
+
+### Como compilar e executar (Nível Mestre)
+
+1) Compile o código (mesmo arquivo `batalhaNaval.c` contém a implementação do Mestre):
+
+```bash
+gcc batalhaNaval.c -o batalhaNaval
+```
+
+2) Execute:
+
+```bash
+./batalhaNaval
+```
+
+3) Saída esperada (exemplo):
+
+```text
+Nível Mestre - Padrões e Tabuleiro de Habilidades
+
+Padrão: Cone (3x5)
+0 0 1 0 0
+0 1 1 1 0
+1 1 1 1 1
+
+Padrão: Octaedro (3x5)
+0 0 1 0 0
+0 1 1 1 0
+0 0 1 0 0
+
+Padrão: Cruz (3x5)
+0 0 1 0 0
+1 1 1 1 1
+0 0 1 0 0
+
+Tabuleiro de Habilidades (0=não atingido,1=atingido):
+0 0 0 0 0 0 0 0 0 0
+0 0 0 1 0 0 0 0 0 0
+0 0 1 1 1 0 1 0 0 0
+0 1 1 1 1 1 1 1 0 0
+0 0 0 0 0 0 1 0 1 0
+0 0 0 0 0 0 1 1 1 1
+0 0 0 0 0 0 0 0 1 0
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+```
+
+Notas rápidas:
+- Os padrões são aplicados com âncoras (posições top-left) definidas no código; altere os offsets para testar outros posicionamentos.
+- No tabuleiro mestre, `1` indica área atingida por qualquer habilidade.
+
+---
+
 ## 📋 Requisitos Funcionais Comuns
 - **Entrada de Dados:** Os valores serão inseridos manualmente por meio de variáveis no código.
 - **Utilização de Matrizes:** Os dados devem ser estruturados de maneira eficiente utilizando matrizes.
